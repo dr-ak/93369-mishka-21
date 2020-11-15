@@ -8,11 +8,11 @@
     <header class="page-header">
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
+          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
           <li class="site-list__item site-list__item--logo">
-            <a href="">
+            <a href="index.html">
               <img src="" width="86" height="35" alt="Логотип «Мишка»">
             </a>
-            <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
           </li>
           <li class="site-list__item">
             <a href="">
@@ -61,14 +61,14 @@
           <legend class="order-form__title">Тип</legend>
           <ul class="order-form__list">
             <li class="order-form__item">
-              <input class="order-form__radio visually-hidden" type="radio" name="type" value="accessories" checked>
-              <label class="order-form__name">
+              <input class="order-form__radio visually-hidden" id="accessories" type="radio" name="type" value="accessories" checked>
+              <label class="order-form__name" for="accessories">
                 Аккумуляторные
               </label>
             </li>
             <li class="order-form__item">
-              <input class="order-form__radio visually-hidden" type="radio" name="type" value="kinder-toy">
-              <label class="order-form__name">
+              <input class="order-form__radio visually-hidden" id="kinder-toy" type="radio" name="type" value="kinder-toy">
+              <label class="order-form__name" for="kinder-toy">
                 Детская игрушка
               </label>
             </li>
@@ -78,38 +78,38 @@
           <legend class="order-form__title">Цвет</legend>
           <ul class="order-form__list">
             <li class="order-form__item">
-              <input class="order-form__checkbox visually-hidden" type="checkbox" name="white" checked>
-              <label class="order-form__name">
+              <input class="order-form__checkbox visually-hidden" id="white" type="checkbox" name="white" checked>
+              <label class="order-form__name" for="white">
                 Белый
               </label>
             </li>
             <li class="order-form__item">
-              <input class="order-form__checkbox visually-hidden" type="checkbox" name="gray" checked>
-              <label class="order-form__name">
+              <input class="order-form__checkbox visually-hidden" id="gray" type="checkbox" name="gray" checked>
+              <label class="order-form__name" for="gray">
                 Серый
               </label>
             </li>
             <li class="order-form__item">
-              <input class="order-form__checkbox visually-hidden" type="checkbox" name="tiffany">
-              <label class="order-form__name">
+              <input class="order-form__checkbox visually-hidden" id="tiffany" type="checkbox" name="tiffany">
+              <label class="order-form__name" for="tiffany">
                 «Тиффани»
               </label>
             </li>
             <li class="order-form__item">
-              <input class="order-form__checkbox visually-hidden" type="checkbox" name="black">
-              <label class="order-form__name">
+              <input class="order-form__checkbox visually-hidden" id="black" type="checkbox" name="black">
+              <label class="order-form__name" for="black">
                 Черный
               </label>
             </li>
             <li class="order-form__item">
-              <input class="order-form__checkbox visually-hidden" type="checkbox" name="pink">
-              <label class="order-form__name">
+              <input class="order-form__checkbox visually-hidden" id="pink" type="checkbox" name="pink">
+              <label class="order-form__name" for="pink">
                 Розовый
               </label>
             </li>
             <li class="order-form__item">
-              <input class="order-form__checkbox visually-hidden" type="checkbox" name="orange">
-              <label class="order-form__name">
+              <input class="order-form__checkbox visually-hidden" id="orange" type="checkbox" name="orange">
+              <label class="order-form__name" for="orange">
                 Оранжевый
               </label>
             </li>
@@ -161,13 +161,13 @@
       </a>
       <ul class="social-list page-footer__social">
         <li class="social-list__item">
-          <a href="#">Instagram</a>
+          <a href="" aria-label="Мишка в Instagram"></a>
         </li>
         <li class="social-list__item">
-          <a href="#">Facebook</a>
+          <a href="" aria-label="Мишка в Facebook"></a>
         </li>
         <li class="social-list__item">
-          <a href="#">Twitter</a>
+          <a href="" aria-label="Мишка в Twitter"></a>
         </li>
       </ul>
       <p class="page-footer__copyright">
