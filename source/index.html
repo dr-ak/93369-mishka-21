@@ -45,9 +45,7 @@
             </a>
           </li>
           <li class="site-list__item">
-            <a href="">
               Бесплатная доставка по России
-            </a>
           </li>
         </ul>
       </nav>
@@ -68,35 +66,33 @@
           </li>
         </ul>
       </section>
-      <section class="week-product">
-        <article>
-          <header>
-            <h2 class="block-title"><span>Товар недели</span>Вязаные корзинки</h2>
-          </article>
-          <p>
-            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-          </p>
-          <dl class="week-product__params">
-            <div class="week-product__item">
-              <dt class="week-product__param">Цвет:</dt>
-              <dd class="week-product__value">«Тиффани»/серый</dd>
-            </div>
-            <div class="week-product__item">
-              <dt class="week-product__param">Диаметр:</dt>
-              <dd class="week-product__value">25 см</dd>
-            </div>
-            <div class="week-product__item">
-              <dt class="week-product__param">Высота:</dt>
-              <dd class="week-product__value">15 см</dd>
-            </div>
-          </dl>
-          <img src="" alt="">
-          <footer>
-            <p>Цена: 990 руб.</p>
-            <a href="" class="button week-product__button">Заказать</a>
-          </footer>
-        </article>
-      </section>
+      <article class="week-product">
+        <header class="week-product__header">
+          <h2 class="block-title"><span>Товар недели</span>Вязаные корзинки</h2>
+        </header>
+        <p>
+          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+        </p>
+        <dl class="week-product__params">
+          <div class="week-product__item">
+            <dt class="week-product__param">Цвет:</dt>
+            <dd class="week-product__value">«Тиффани»/серый</dd>
+          </div>
+          <div class="week-product__item">
+            <dt class="week-product__param">Диаметр:</dt>
+            <dd class="week-product__value">25 см</dd>
+          </div>
+          <div class="week-product__item">
+            <dt class="week-product__param">Высота:</dt>
+            <dd class="week-product__value">15 см</dd>
+          </div>
+        </dl>
+        <img src="" alt="">
+        <footer class="week-product__footer">
+          <p>Цена: 990 руб.</p>
+          <button class="button week-product__button" type="button">Заказать</button>
+        </footer>
+      </article>
       <section class="about-us">
         <h2 class="block-title">Коротко о нас:</h2>
         <ul class="about-us__list">
@@ -124,33 +120,33 @@
         <h2 class="block-title">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item">
-            <blockquote class="reviews__item__wrapper">
+            <blockquote class="reviews__wrapper">
               <p>
                 Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
               <cite class="reviews__author">
-                <p>Анастасия Красильникова</p>
+                <p class="reviews__name">Анастасия Красильникова</p>
                 <a href="">@misssssiskras</a>
               </cite>
             </blockquote>
           </li>
           <li class="reviews__item">
-            <blockquote class="reviews__item__wrapper">
+            <blockquote class="reviews__wrapper">
               <p>
                 Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
               <cite class="reviews__author">
-                <p>Екатерина Красильникова</p>
+                <p class="reviews__name">Екатерина Красильникова</p>
                 <a href="">@misssssiskras2</a>
               </cite>
             </blockquote>
           </li>
         </ul>
         <div class="reviews__controls">
-          <button class="reviews__arrow reviews__arrow-left" aria-label="Prev"></button>
-          <button class="reviews__arrow reviews__arrow-right" aria-label="Next"></button>
+          <button class="reviews__arrow reviews__arrow--left" aria-label="Предыдущий отзыв"></button>
+          <button class="reviews__arrow reviews__arrow--right" aria-label="Следующий отзыв"></button>
         </div>
-        <button class="button reviews__button">Написать</button>
+        <a href="" class="button reviews__button">Написать</a>
       </section>
       <section class="contacts">
         <h2 class="block-title">Контакты</h2>
@@ -164,7 +160,7 @@
             <dd class="contacts__address">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
           </div>
         </dl>
-        <button class="button contacts__button">Напишите нам</button>
+        <a href="" class="button contacts__button">Напишите нам</a>
         <div class="contacts__map">
           <img src="" alt="">
         </div>
@@ -175,7 +171,7 @@
       <a class="page-footer__logo">
         <img src="" width="86" height="35" alt="Логотип «Мишка»">
       </a>
-      <ul class="social-list page-footer__social-list">
+      <ul class="social-list page-footer__social">
         <li class="social-list__item">
           <a href="#">Instagram</a>
         </li>
@@ -186,7 +182,9 @@
           <a href="#">Twitter</a>
         </li>
       </ul>
-      <p class="page-footer__copyright">Разработано<img src="" alt=""></p>
+      <p class="page-footer__copyright">
+        Разработано<a href="https://htmlacademy.ru/intensive/adaptive"><img src="" alt=""></a>
+      </p>
     </footer>
 
     <div class="modal modal-cart">
@@ -197,7 +195,7 @@
         <button class="modal-cart__button-size">M</button>
         <button class="modal-cart__button-size">L</button>
       </div>
-      <button class="button modal-cart__button">Добавить</button>
+      <a href="" class="button modal-cart__button">Добавить</a>
     </div>
 
   </body>
