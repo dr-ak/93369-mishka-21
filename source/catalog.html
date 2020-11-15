@@ -14,7 +14,7 @@
               <img src="" width="86" height="35" alt="Логотип «Мишка»">
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a>
               Каталог товаров
             </a>
@@ -59,30 +59,42 @@
         <h2 class="visually-hidden">Список товаров</h2>
         <ul class="catalog__list">
           <li class="catalog__item-wrap">
-            <article class="catalog__item">
-              <h3 class="catalog__product-title">Зайчик-попрыгайчик</h3>
-              <img src="" alt="">
-              <p>Рост 30 см, вес 200 г</p>
-              <span class="catalog__price">1 200 руб.</span>
-              <button class="catalog__cart" type="button" aria-label="Добавить в корзину"></button>
+            <article class="catalog-item">
+              <a href=""><img src="" alt=""></a>
+              <div class="catalog-item__header">
+                <a href=""><h3 class="catalog-item__product-title">Зайчик-попрыгайчик</h3></a>
+                <p>Рост 30 см, вес 200 г</p>
+              </div>
+              <div class="catalog-item__footer">
+                <span class="catalog-item__price">1 200 руб.</span>
+                <a href="" class="catalog-item__cart" aria-label="Добавить в корзину"></button>
+              </div>
             </article>
           </li>
           <li class="catalog__item-wrap">
-            <article class="catalog__item">
-              <h3 class="catalog__product-title">Корзинка для белья</h3>
-              <img src="" alt="">
-              <p>Диаметр 15 см, высота 10 см</p>
-              <span class="catalog__price">690 руб.</span>
-              <button class="catalog__cart" type="button" aria-label="Добавить в корзину"></button>
+            <article class="catalog-item">
+              <a href=""><img src="" alt=""></a>
+              <div class="catalog-item__header">
+                <a href=""><h3 class="catalog-item__product-title">Корзинка для белья</h3></a>
+                <p>Диаметр 15 см, высота 10 см</p>
+              </div>
+              <div class="catalog-item__footer">
+                <span class="catalog-item__price">690 руб.</span>
+                <a href="" class="catalog-item__cart" aria-label="Добавить в корзину"></button>
+              </div>
             </article>
           </li>
           <li class="catalog__item-wrap">
-            <article class="catalog__item">
-              <h3 class="catalog__product-title">Большая корзинка для игрушек</h3>
-              <img src="" alt="">
-              <p>Диаметр 30 см, высота 30 см</p>
-              <span class="catalog__price">1 500 руб.</span>
-              <button class="catalog__cart" type="button" aria-label="Добавить в корзину"></button>
+            <article class="catalog-item">
+              <a href=""><img src="" alt=""></a>
+              <div class="catalog-item__header">
+                <a href=""><h3 class="catalog-item__product-title">Большая корзинка для игрушек</h3></a>
+                <p>Диаметр 30 см, высота 30 см</p>
+              </div>
+              <div class="catalog-item__footer">
+                <span class="catalog-item__price">1 500 руб.</span>
+                <a href="" class="catalog-item__cart" aria-label="Добавить в корзину"></button>
+              </div>
             </article>
           </li>
         </ul>
@@ -92,9 +104,9 @@
         <video class="production__video" poster="" width="" height="">
           <source src="video.mp4" type="video/mp4">
         </video>
-        <button type="button" class="visually-hidden">Смотреть видео</button>
+        <button type="button" class="production__video-button">Смотреть видео</button>
         <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <button class="button production__button" type="button">Сделать заказ</button>
+        <a href="" class="button production__button" type="button">Сделать заказ</a>
       </section>
     </main>
 
