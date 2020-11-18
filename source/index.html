@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page__body">
     <header class="page-header">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--logo">
             <a>
-              <img src="" width="86" height="35" alt="Логотип «Мишка»">
+              <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
             </a>
           </li>
           <li class="site-list__item">
@@ -34,17 +35,17 @@
               Корзина: пока пуста
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item visually-hidden">
             <a href="">
               Новые поступления
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item visually-hidden">
             <a href="">
               Распродажа
             </a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item visually-hidden">
               Бесплатная доставка по России
           </li>
         </ul>
@@ -56,19 +57,19 @@
         <h1 class="main-title">Милые штуки ручной работы для дома</h1>
       </div>
       <section class="offers">
-        <h2 class="block-title visually-hidden">Наши предложения</h2>
+        <h2 class="visually-hidden">Наши предложения</h2>
         <ul class="offers__list">
           <li class="offers__item">
             <a class="offers__link" href="">Предметы интерьера</a>
           </li>
           <li class="offers__item">
-            <a class="offers__link" href="">Детские игрушки</a>
+            <a class="offers__link offers__link--right" href="">Детские игрушки</a>
           </li>
         </ul>
       </section>
       <article class="week-product">
         <header class="week-product__header">
-          <h2 class="block-title"><span>Товар недели</span>Вязаные корзинки</h2>
+          <h2 class="block-title">Вязаные корзинки<span class="block-title__additional">Товар недели</span></h2>
         </header>
         <p>
           Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
@@ -87,9 +88,9 @@
             <dd class="week-product__value">15 см</dd>
           </div>
         </dl>
-        <img src="" alt="">
+        <img src="img/triple-set-mobile.jpg" alt="Вязанные корзинки">
         <footer class="week-product__footer">
-          <p>Цена: 990 руб.</p>
+          <p class="week-product__price">Цена: 990 руб.</p>
           <a href="" class="button week-product__button" type="button">Заказать</a>
         </footer>
       </article>
@@ -119,8 +120,8 @@
       <section class="reviews">
         <h2 class="block-title">Отзывы</h2>
         <ul class="reviews__list">
-          <li class="reviews__item">
-            <blockquote class="reviews__wrapper">
+          <li class="reviews__wrapper">
+            <blockquote class="reviews__item">
               <p>
                 Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
@@ -130,8 +131,8 @@
               </cite>
             </blockquote>
           </li>
-          <li class="reviews__item">
-            <blockquote class="reviews__wrapper">
+          <li class="reviews__wrapper">
+            <blockquote class="reviews__item">
               <p>
                 Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
               </p>
@@ -149,7 +150,7 @@
         <a href="" class="button reviews__button">Написать</a>
       </section>
       <section class="contacts">
-        <h2 class="block-title">Контакты</h2>
+        <h2 class="block-title  contacts__title">Контакты</h2>
         <dl class="contacts__list">
           <div class="contacts__item">
             <dt class="contacts__type">e-mail:</dt>
@@ -160,40 +161,43 @@
             <dd class="contacts__address">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
           </div>
         </dl>
-        <a href="" class="button contacts__button">Напишите нам</a>
         <div class="contacts__map">
-          <img src="" alt="">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
         </div>
+        <a href="" class="button contacts__button">Напишите нам</a>
       </section>
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo">
+      <a class="page-footer__logo visually-hidden">
         <img src="" width="86" height="35" alt="Логотип «Мишка»">
       </a>
       <ul class="social-list page-footer__social">
-        <li class="social-list__item">
+        <li class="social-list__item social-list__item--insta">
           <a href="" aria-label="Мишка в Instagram"></a>
         </li>
-        <li class="social-list__item">
+        <li class="social-list__item social-list__item--fb">
           <a href="" aria-label="Мишка в Facebook"></a>
         </li>
-        <li class="social-list__item">
+        <li class="social-list__item social-list__item--twitter">
           <a href="" aria-label="Мишка в Twitter"></a>
         </li>
       </ul>
       <p class="page-footer__copyright">
-        Разработано<a href="https://htmlacademy.ru/intensive/adaptive"><img src="" alt=""></a>
+        <span>Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="img/htmlacademy.svg" alt="">
+        </a>
       </p>
     </footer>
 
     <div class="modal modal-cart">
-      <h2 class="block-title">Добавить в корзину</h2>
+      <h2 class="block-title modal-cart__title">Добавить в корзину</h2>
       <p>Выберите размер:</p>
       <div class="modal-cart__sizes">
-        <button class="modal-cart__button-size modal-cart__button-size--active">S</button>
-        <button class="modal-cart__button-size">M</button>
-        <button class="modal-cart__button-size">L</button>
+        <button class="button modal-cart__button-size modal-cart__button-size--active">S</button>
+        <button class="button modal-cart__button-size">M</button>
+        <button class="button modal-cart__button-size">L</button>
       </div>
       <a href="" class="button modal-cart__button">Добавить</a>
     </div>
