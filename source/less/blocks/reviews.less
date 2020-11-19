@@ -1,0 +1,102 @@
+.reviews {
+  padding: 58px 30px 51px 30px;
+}
+
+.reviews__list {
+  .reset-list;
+  .set-font-params(15px; 30px);
+}
+
+.reviews__wrapper {
+  padding: 14px 0 30px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: 33px;
+}
+
+.reviews__author {
+  .set-font-params(17px; 24px);
+  font-style: normal;
+}
+
+.reviews__name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.reviews__author a {
+  color: @basic-black;
+}
+
+.reviews__controls {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.reviews__arrow {
+  position: relative;
+  flex-grow: 1;
+  margin: 0;
+  height: 52px;
+  background-color: @basic-white;
+  border-radius: none;
+  border: 1px solid @gray;
+
+  &--left {
+    border-right: 0;
+  }
+
+  &--left::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-left: 4px solid @basic-black;
+    border-bottom: 4px solid @basic-black;
+    transform: rotate(45deg);
+    right: calc(50% + 3px);
+    top: calc(50% - 10px);
+  }
+
+  &--left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background-color: @basic-black;
+    right: calc(50% - 25px);
+    top: calc(50% - 2px);
+  }
+
+  &--right::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-right: 4px solid @basic-black;
+    border-top: 4px solid @basic-black;
+    transform: rotate(45deg);
+    left: calc(50% + 3px);
+    top: calc(50% - 10px);
+  }
+
+  &--right::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background-color: @basic-black;
+    left: calc(50% - 25px);
+    top: calc(50% - 2px);
+  }
+}

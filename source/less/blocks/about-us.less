@@ -1,0 +1,78 @@
+.about-us {
+  padding: 31px 30px 0 30px;
+}
+
+.about-us__list {
+  .reset-list;
+  .set-font-params(17px; 20px; bold);
+}
+
+.about-us__item {
+  padding-top: 83px;
+  position: relative;
+
+  &--ecology-stuff::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 38px;
+    background-image: url("../img/ecology-stuff.svg");
+    background-repeat: no-repeat;
+    top: 28px;
+    left: 8px;
+  }
+
+  &--economy::before {
+    content: "";
+    position: absolute;
+    width: 47px;
+    height: 27px;
+    background-image: url("../img/economy.svg");
+    background-repeat: no-repeat;
+    top: 30px;
+  }
+
+  &--like-up::before {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 27px;
+    background-image: url("../img/like-up.svg");
+    background-repeat: no-repeat;
+    top: 35px;
+    left: 7px;
+  }
+
+  &--with-love::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 34px;
+    background-image: url("../img/with-love.svg");
+    background-repeat: no-repeat;
+    top: 32px;
+    left: 3px;
+  }
+
+  &--support-local-brands::before {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 23px;
+    background-image: url("../img/support-local-brands.svg");
+    background-repeat: no-repeat;
+    top: 33px;
+    left: -6px;
+  }
+
+  &--gift-pack::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 32px;
+    background-image: url("../img/gift-pack.svg");
+    background-repeat: no-repeat;
+    top: 32px;
+    left: 3px;
+  }
+}
