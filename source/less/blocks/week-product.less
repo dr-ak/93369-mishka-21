@@ -1,21 +1,16 @@
 .week-product {
   padding: 31px 30px 41px 30px;
-  background-image: url("../img/zigzag-line-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
 }
 
 .week-product p {
-  font-size: 15px;
-  line-height: 24px;
+  .set-font-params(15px; 24px);
   margin: 0;
   margin-top: 17px;
 }
 
 .week-product__params {
   margin: 28px 0;
-  font-size: 15px;
-  line-height: 20px;
+  .set-font-params(15px; 20px);
 }
 
 .week-product__item {
@@ -32,9 +27,7 @@
   margin-top: 0;
   padding: 25px 0;
   text-align: center;
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 24px;
+  .set-font-params(17px; 24px; bold);
   color: @dark-gray;
 }
 

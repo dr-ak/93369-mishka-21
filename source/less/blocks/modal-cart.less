@@ -10,8 +10,7 @@
 
 .modal-cart p {
   margin: 21px 0 14px;
-  font-size: 15px;
-  line-height: 30px;
+  .set-font-params(15px; 30px);
 }
 
 .modal-cart__sizes {
@@ -20,16 +19,24 @@
 }
 
 .modal-cart__button-size {
+  .set-font-params(18px; 20px; bold);
+  color: @dark-gray;
+  text-transform: uppercase;
+  padding: 16px 0;
+  border: 2px solid @dark-gray;
+  display: block;
+  text-align: center;
+  background-color: @basic-white;
   flex-grow: 1;
   margin-right: 7px;
-}
 
-.modal-cart__button-size:last-child {
-  margin-right: 0;
-}
+  &:last-child {
+    margin-right: 0;
+  }
 
-.modal-cart__button-size--active {
-  border-color: @basic-second;
+  &--active {
+    border-color: @basic-second;
+  }
 }
 
 .modal-cart__button {

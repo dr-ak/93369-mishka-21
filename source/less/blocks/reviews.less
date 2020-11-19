@@ -1,16 +1,10 @@
 .reviews {
   padding: 58px 30px 51px 30px;
-  background-image: url("../img/zigzag-line-desktop.svg");
-  background-repeat: no-repeat;
-  background-position: bottom left;
 }
 
 .reviews__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 15px;
-  line-height: 30px;
+  .reset-list-default;
+  .set-font-params(15px; 30px);
 }
 
 .reviews__wrapper {
@@ -21,18 +15,17 @@
   margin: 0;
 }
 
-.reviews__item > p {
+.reviews__text {
   margin: 0;
   margin-bottom: 33px;
 }
 
 .reviews__author {
-  font-size: 17px;
-  line-height: 24px;
+  .set-font-params(17px; 24px);
   font-style: normal;
 }
 
-.reviews__author p {
+.reviews__name {
   margin: 0;
   font-weight: bold;
 }
@@ -47,6 +40,7 @@
 }
 
 .reviews__arrow {
+  position: relative;
   flex-grow: 1;
   margin: 0;
   height: 52px;
@@ -55,15 +49,54 @@
   border: 1px solid @gray;
 
   &--left {
-    background-image: url("../img/huge-arrow-left.svg");
-    background-repeat: no-repeat;
-    background-position: center;
     border-right: 0;
   }
 
-  &--right {
-    background-image: url("../img/huge-arrow-right.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--left::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-left: 4px solid @basic-black;
+    border-bottom: 4px solid @basic-black;
+    transform: rotate(45deg);
+    right: calc(50% + 3px);
+    top: calc(50% - 10px);
+  }
+
+  &--left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background-color: @basic-black;
+    right: calc(50% - 25px);
+    top: calc(50% - 2px);
+  }
+
+  &--right::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-right: 4px solid @basic-black;
+    border-top: 4px solid @basic-black;
+    transform: rotate(45deg);
+    left: calc(50% + 3px);
+    top: calc(50% - 10px);
+  }
+
+  &--right::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 4px;
+    background-color: @basic-black;
+    left: calc(50% - 25px);
+    top: calc(50% - 2px);
   }
 }
