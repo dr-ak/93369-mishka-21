@@ -7,11 +7,8 @@
   margin: 0;
   padding: 0;
   border: none;
-
-  &--tel {
-    position: relative;
-    padding-bottom: 35px;
-  }
+  position: relative;
+  padding-bottom: 35px;
 
   &--tel label::before {
     position: absolute;
@@ -22,11 +19,6 @@
     width: 25px;
     height: 24px;
     background-image: url("../img/phone.svg");
-  }
-
-  &--email {
-    position: relative;
-    padding-bottom: 35px;
   }
 
   &--email label::before {
@@ -43,26 +35,19 @@
 
 .order-form__title {
   .set-font-params(17px; 16px);
-  display: block;
+  display: flex;
+  align-items: center;
   width: 100%;
-  position: relative;
   color: @basic-second;
   text-transform: uppercase;
 
   &::after {
     content: "";
-    position: absolute;
-    display: block;
-    width: calc(100% - 60px);
+    flex-grow: 1;
+    width: 100px;
     height: 1px;
     background-color: @basic-second;
-    top: 50%;
-    margin-left: 60px;
-  }
-
-  &--email::after {
-    margin-left: 78px;
-    width: calc(100% - 78px);
+    margin-left: 25px;
   }
 }
 
@@ -71,17 +56,31 @@
   .set-font-params(17px; 18px; bold);
 
   &--radio {
-    padding-left: 60px;
     margin: 30px 0;
+
+    & .order-form__item {
+      padding-left: 60px;
+      min-height: 42px;
+      margin-bottom: 11px;
+    }
   }
 
   &--checkbox {
-    padding-left: 60px;
     margin: 25px 0 33px;
+
+    & .order-form__item {
+      padding-left: 60px;
+      min-height: 38px;
+      margin-bottom: 23px;
+    }
   }
 
   &--text {
     margin: 29px 0 34px;
+
+    & .order-form__item {
+      margin-top: 22px;
+    }
   }
 }
 
@@ -89,27 +88,13 @@
   position: relative;
   display: flex;
   align-items: center;
-
-  &--radio {
-    min-height: 42px;
-    margin-bottom: 11px;
-  }
-
-  &--checkbox {
-    min-height: 38px;
-    margin-bottom: 23px;
-  }
-
-  &--text {
-    margin-top: 22px;
-  }
 }
 
 .order-form__radio {
   & + label::before {
     content: "";
     position: absolute;
-    left: -60px;
+    left: 0;
     top: 0;
     width: 42px;
     height: 42px;
@@ -120,7 +105,7 @@
   &:checked + label::after {
     content: "";
     position: absolute;
-    left: -48px;
+    left: 12px;
     top: 12px;
     width: 18px;
     height: 18px;
@@ -133,7 +118,7 @@
   & + label::before {
     content: "";
     position: absolute;
-    left: -60px;
+    left: 0;
     top: 0;
     width: 38px;
     height: 38px;
@@ -143,7 +128,7 @@
   &:checked + label::after {
     content: "";
     position: absolute;
-    left: -51px;
+    left: 9px;
     top: 12px;
     width: 21px;
     height: 11px;
@@ -166,8 +151,7 @@
   box-shadow: inset 0 -2px 0 @basic-black;
 
   &::placeholder {
-    color: @basic-black;
-    opacity: 0.3;
+    color: fade(@basic-black, 30%);
   }
 
   &:focus {
@@ -185,8 +169,7 @@
   box-shadow: inset 0 -2px 0 @basic-black;
 
   &::placeholder {
-    color: @basic-black;
-    opacity: 0.3;
+    color: fade(@basic-black, 30%);
   }
 
   &:focus {
@@ -204,8 +187,7 @@
   box-shadow: inset 0 -2px 0 @basic-black;
 
   &::placeholder {
-    color: @basic-black;
-    opacity: 0.3;
+    color: fade(@basic-black, 30%);
   }
 
   &:focus {
@@ -219,14 +201,12 @@
   min-height: 142px;
   margin: 22px 0 17px;
   padding: 17px;
-  resize: none;
   .set-font-params(17px; 18px);
   border-radius: 0;
   border: 2px solid @basic-black;
 
   &::placeholder {
-    color: @basic-black;
-    opacity: 0.3;
+    color: fade(@basic-black, 30%);
   }
 
   &:focus {
