@@ -5,21 +5,12 @@
 }
 
 .production__title {
-  position: relative;
   margin: 0;
   padding: 22px 15px 26px 90px;
   .set-font-params(17px; 24px; bold);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: calc(50% - 16px);
-    left: 34px;
-    width: 32px;
-    height: 22px;
-    background-image: url("../img/video.svg");
-    background-repeat: no-repeat;
-  }
+  background-image: url("../img/video.svg");
+  background-repeat: no-repeat;
+  background-position: 34px (50% - 5px);
 }
 
 .production video {

@@ -2,13 +2,16 @@
   display: block;
 }
 
+.catalog-item__info {
+  padding: 28px 28px 26px;
+}
+
 .catalog-item__header {
-  margin: 0 28px;
-  padding: 28px 0 18px;
+  padding-bottom: 18px;
   border-bottom: 1px solid @gray;
 }
 
-.catalog-item__product-title {
+.catalog-item__title {
   margin: 0;
   .set-font-params(17px; 24px; bold);
   color: @basic-black;
@@ -22,25 +25,10 @@
 
 .catalog-item__footer {
   display: flex;
-  margin: 0 28px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .catalog-item__price {
-  padding: 23px 0 26px;
-}
-
-.catalog-item__cart {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    right: 0;
-    width: 20px;
-    height: 19px;
-    background-image: url("../img/cart.svg");
-    background-repeat: no-repeat;
-  }
+  padding-top: 23px;
 }
