@@ -7,29 +7,34 @@
 }
 
 .social-list__item {
-  &--insta a {
-    display: block;
-    width: 22px;
-    height: 21px;
-    background-image: url("../img/insta.svg");
-    background-repeat: no-repeat;
-    margin-right: 41px;
-  }
+  position: relative;
+  margin: 0 20px;
+  width: 28px;
+  height: 28px;
 
-  &--fb a {
-    display: block;
-    width: 15px;
+  & a::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    width: 28px;
     height: 28px;
-    background-image: url("../img/fb.svg");
-    background-repeat: no-repeat;
-    margin-right: 41px;
   }
 
-  &--twitter a {
-    display: block;
-    width: 23px;
-    height: 20px;
+  &--insta a::before {
+    left: 3px;
+    top: 3px;
+    background-image: url("../img/insta.svg");
+  }
+
+  &--fb a::before {
+    left: 6px;
+    top: 0;
+    background-image: url("../img/fb.svg");
+  }
+
+  &--twitter a::before {
+    left: 2px;
+    top: 4px;
     background-image: url("../img/twitter.svg");
-    background-repeat: no-repeat;
   }
 }
