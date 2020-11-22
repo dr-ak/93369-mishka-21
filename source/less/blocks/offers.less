@@ -1,5 +1,10 @@
 .offers__list {
   .reset-list;
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .offers__link {

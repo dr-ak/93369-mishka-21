@@ -5,6 +5,13 @@
 .about-us__list {
   .reset-list;
   .set-font-params(17px; 20px; bold);
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    margin: 0 auto;
+  }
 }
 
 .about-us__item {
@@ -74,5 +81,16 @@
     background-repeat: no-repeat;
     top: 32px;
     left: 3px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 350px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .about-us .block-title {
+    width: 700px;
+    margin: 0 auto;
   }
 }

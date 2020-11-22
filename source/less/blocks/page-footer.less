@@ -1,6 +1,19 @@
 .page-footer {
   padding: 0 30px;
   background-color: @basic-first;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .page-footer__copyright {
