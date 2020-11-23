@@ -9,6 +9,15 @@
   border: none;
   position: relative;
   padding-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 4fr;
+  }
 }
 
 .order-form__fieldset--tel label::before {
@@ -20,6 +29,10 @@
   width: 25px;
   height: 24px;
   background-image: url("../img/phone.svg");
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-first;
+  }
 }
 
 .order-form__fieldset--email label::before {
@@ -48,6 +61,10 @@
     height: 1px;
     background-color: @basic-second;
     margin-left: 25px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
@@ -61,6 +78,15 @@
 
   &--checkbox {
     margin: 25px 0 33px;
+
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: @desktop-width) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   &--text {
@@ -220,4 +246,14 @@
 .order-form__button {
   margin: 30px 0 55px;
   width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__fieldset--color,
+  .order-form__fieldset--tel,
+  .order-form__fieldset--email,
+  .order-form__fieldset--tel input,
+  .order-form__fieldset--email input {
+    background-color: @basic-first;
+  }
 }
