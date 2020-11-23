@@ -4,9 +4,26 @@
 
 .catalog__list {
   .reset-list;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .catalog__item-wrap {
   margin-bottom: 30px;
   border: 1px solid @gray;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-item {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-item {
+    display: block;
+  }
 }
