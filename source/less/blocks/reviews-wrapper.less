@@ -1,0 +1,36 @@
+.reviews-wrapper {
+  position: relative;
+  padding-top: 46px;
+  padding-bottom: 53px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    padding-top: 2.03%;
+    width: 100%;
+    background-image: url("../img/zigzag-line-desktop.svg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 72px;
+    padding-top: 86px;
+    padding-bottom: 80px;
+    background-image: url("../img/review1.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-image: none;
+
+    &::before {
+      background-image: none;
+    }
+  }
+}

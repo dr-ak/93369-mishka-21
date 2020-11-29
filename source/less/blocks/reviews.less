@@ -1,10 +1,30 @@
 .reviews {
-  padding: 58px 30px 51px 30px;
-
   @media (min-width: @tablet-width) {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 4fr 1fr;
+    position: relative;
+    padding-top: 54px;
+    padding-bottom: 163px;
+    background-image: url("../img/review1.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      padding-top: 2.03%;
+      width: 100%;
+      background-image: url("../img/zigzag-line-desktop.svg");
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
 
@@ -15,10 +35,15 @@
   @media (min-width: @tablet-width) {
     order: 1;
     grid-column: 1 / span 2;
+    .set-font-params(17px; 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / span 2;
   }
 }
 
-.reviews__wrapper {
+.reviews__item-wrapper {
   padding: 14px 0 30px;
 }
 
@@ -29,11 +54,29 @@
 .reviews__text {
   margin: 0;
   margin-bottom: 33px;
+  min-height: 120px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 14px;
+    margin-right: 70px;
+  }
 }
 
 .reviews__author {
   .set-font-params(17px; 24px);
   font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    .set-font-params(18px; 24px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font-params(17px; 24px);
+  }
 }
 
 .reviews__name {
@@ -51,9 +94,13 @@
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    right: 30px;
-    bottom: 51px;
+    right: 0;
+    bottom: 0;
     width: 175px;
+  }
+
+  @media (min-width: @desktop-width) {
+    bottom: 146px;
   }
 }
 
@@ -113,5 +160,19 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__button {
+    width: 175px;
+    margin-left: auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews .block-title {
+    grid-column: 2;
   }
 }
