@@ -1,3 +1,55 @@
+.intro {
+  .container;
+  position: relative;
+  background-color: @basic-first;
+
+  &--image {
+    z-index: -2;
+    margin-bottom: 133px;
+    background-image: url("../img/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 12px;
+
+    &::after {
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      content: "";
+      width: 100%;
+      padding-top: 3%;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-size: cover;
+
+      @media (min-width: @desktop-width) {
+        bottom: -17px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 17px;
+  }
+
+  &::before {
+    position: relative;
+    display: block;
+    content: "";
+    padding-top: calc(70% + 195px);
+    margin-top: -18px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: -2px;
+      padding-top: 0;
+      height: 746px;
+    }
+  }
+}
+
 .itro__title {
   position: absolute;
   top: 24%;
