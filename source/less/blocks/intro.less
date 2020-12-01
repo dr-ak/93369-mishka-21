@@ -1,61 +1,53 @@
 .intro {
-  .container;
   position: relative;
-  background-color: @basic-first;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 73px;
+  background-color: @beige;
 
   &--image {
-    z-index: -2;
-    margin-bottom: 133px;
+    min-height: 489px;
     background-image: url("../img/hero-desktop.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-position: top center;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 12px;
+    padding-top: 154px;
+    padding-bottom: 12px;
+
+    &--image {
+      min-height: 758px;
+    }
 
     &::after {
       position: absolute;
-      bottom: -12px;
-      left: 0;
       content: "";
       width: 100%;
-      padding-top: 3%;
+      height: 34px;
+      bottom: 0;
+      z-index: 1;
       background-image: url("../img/zigzag-fill-desktop.svg");
-      background-size: cover;
-
-      @media (min-width: @desktop-width) {
-        bottom: -17px;
-      }
+      background-position: bottom center;
     }
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 17px;
-  }
+    padding-top: 158px;
+    padding-bottom: 17px;
 
-  &::before {
-    position: relative;
-    display: block;
-    content: "";
-    padding-top: calc(70% + 195px);
-    margin-top: -18px;
-
-    @media (min-width: @tablet-width) {
-      margin-top: -2px;
-      padding-top: 0;
-      height: 746px;
+    &--image {
+      min-height: 763px;
     }
   }
 }
 
 .itro__title {
-  position: absolute;
-  top: 24%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
+  .container;
+  text-align: center;
+
 
   @media (min-width: @tablet-width) {
     top: 154px;
@@ -67,16 +59,11 @@
 }
 
 .intro__list {
-  position: absolute;
-  width: 100%;
-  bottom: -133px;
-  left: 0;
   .reset-list;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    bottom: 0;
   }
 
   @media (min-width: @desktop-width) {

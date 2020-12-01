@@ -1,4 +1,7 @@
+
+
 .contacts .block-title {
+  position: relative;
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;
@@ -8,12 +11,12 @@
   @media (min-width: @tablet-width) {
     &::after {
       justify-self: end;
-      width: 47px;
-      height: 81px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47 81'%3E%3Cpolygon points='0,0 4,0 4,87 0,87' fill='black'/%3E%3C/svg%3E"),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 42'%3E%3Cpolygon points='8,4 48,23 8,42' fill='%2363D1BB'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
       content: "";
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+      background: conic-gradient(transparent 242deg, @basic-second 245deg 295deg, transparent 298deg) 40px -16px no-repeat,
+        linear-gradient(90deg, @basic-black 0 4px, transparent 4px) 32px 0 no-repeat;
     }
   }
 
@@ -21,13 +24,13 @@
     grid-column: 1 / span 2;
     grid-template-columns: 1fr 2fr;
     padding: 0;
-    margin-bottom: 23px;
-    margin-top: 46px;
+    margin-bottom: 18px;
+    margin-top: 10px;
     align-self: end;
 
     &::after {
       order: -1;
-      justify-self: center;
+      margin-right: 60px;
     }
   }
 }
@@ -121,7 +124,7 @@
 
   .contacts__map {
     grid-column: 3;
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 4;
   }
 
   .contacts__button {

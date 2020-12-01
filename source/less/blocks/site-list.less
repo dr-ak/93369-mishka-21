@@ -12,6 +12,15 @@
   }
 }
 
+.main-nav--opend .site-list__item {
+  &--catalog,
+  &--order,
+  &--search,
+  &--cart {
+    display: block;
+  }
+}
+
 .site-list__item {
   .container;
 
@@ -20,8 +29,7 @@
     background-color: @basic-white;
     box-shadow: 0 1px 0 @gray, inset 0 1px 0 @gray;
 
-    &--logo,
-    &--mobile {
+    &--logo {
       display: block;
     }
   }

@@ -8,30 +8,30 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--logo">
+          <li class="site-list__item site-list__item--logo site-list__item--active">
             <a>
               <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
             </a>
           </li>
-          <li class="site-list__item site-list__item--catalog site-list__item--mobile">
+          <li class="site-list__item site-list__item--catalog">
             <a href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="site-list__item site-list__item--order site-list__item--mobile">
+          <li class="site-list__item site-list__item--order">
             <a href="form.html">
               Вязание на заказ
             </a>
           </li>
-          <li class="site-list__item site-list__item--search site-list__item--mobile">
+          <li class="site-list__item site-list__item--search">
             <a href="">
               Поиск по сайту
             </a>
           </li>
-          <li class="site-list__item site-list__item--cart site-list__item--mobile">
+          <li class="site-list__item site-list__item--cart">
             <a href="">
               Корзина: пока пуста
             </a>
@@ -55,7 +55,7 @@
 
     <main class="page-main">
       <div class="intro intro--image">
-        <h1 class="main-title itro__title">Милые штуки ручной<br>работы для дома</h1>
+        <h1 class="main-title itro__title">Милые&nbsp;штуки ручной работы&nbsp;для&nbsp;дома</h1>
         <ul class="intro__list">
           <li class="intro__item">
             <a class="intro__link intro__link--interior" href="">Предметы<br>интерьера</a>
@@ -69,8 +69,8 @@
         <div class="wrapper week-product__wrapper">
           <header class="week-product__header">
             <h2 class="block-title">
-              <span class="block-title__main-text">Вязаные корзинки</span>
-              <span class="block-title__additional">Товар недели</span>
+              Вязаные корзинки
+              <span>Товар недели</span>
             </h2>
           </header>
           <div class="week-product__info">
@@ -104,22 +104,21 @@
           <h2 class="block-title">Коротко о нас:</h2>
           <ul class="about-us__list">
             <li class="about-us__item about-us__item--ecology-stuff">
-              Экологически <br>чистые материалы
+              Экологически чистые&nbsp;материалы
             </li>
             <li class="about-us__item about-us__item--economy">
-              Скандинавский стиль <br>по российской цене
+              Скандинавский стиль по&nbsp;российской цене
             </li>
             <li class="about-us__item about-us__item--like-up">
-              Увеличивает <br>на фотографиях
-            </li>
+              Увеличивает лайки на&nbsp;фотографиях</li>
             <li class="about-us__item about-us__item--with-love">
-              Связано вручную <br>с любовью и умилением
+              Связано вручную с&nbsp;любовью и умилением
             </li>
             <li class="about-us__item about-us__item--support-local-brands">
-              Поддержка отечественного <br>производителя
+              Поддержка отечественного производителя
             </li>
             <li class="about-us__item about-us__item--gift-pack">
-              Поставляется <br>в подарочной упаковке
+              Поставляется в&nbsp;подарочной упаковке
             </li>
           </ul>
         </div>
@@ -159,6 +158,7 @@
         </div>
       </section>
       <section class="contacts">
+        <div class="image"></div>
         <h2 class="block-title">Контакты</h2>
         <dl class="contacts__list">
           <div class="contacts__item">
@@ -204,17 +204,16 @@
       </div>
     </footer>
 
-    <div class="modal-toning">
-      <div class="modal modal-cart">
-        <h2 class="block-title modal-cart__title">Добавить в корзину</h2>
-        <p>Выберите размер:</p>
-        <div class="modal-cart__sizes">
-          <button class="modal-cart__button-size modal-cart__button-size--active">S</button>
-          <button class="modal-cart__button-size">M</button>
-          <button class="modal-cart__button-size">L</button>
-        </div>
-        <a href="" class="button modal-cart__button">Добавить</a>
+    <div class="modal-toning"></div>
+    <div class="modal modal-cart">
+      <h2 class="block-title modal-cart__title">Добавить в корзину</h2>
+      <p>Выберите размер:</p>
+      <div class="modal-cart__sizes">
+        <button class="modal-cart__button-size modal-cart__button-size--active">S</button>
+        <button class="modal-cart__button-size">M</button>
+        <button class="modal-cart__button-size">L</button>
       </div>
+      <a href="" class="button modal-cart__button">Добавить</a>
     </div>
 
     <script src="js/main-nav.js"></script>

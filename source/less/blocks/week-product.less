@@ -7,17 +7,17 @@
     padding-top: 43px;
     padding-bottom: 67px;
 
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: 0;
-      padding-top: 2.03%;
-      width: 100%;
-      background-image: url("../img/zigzag-line-desktop.svg");
-      background-size: cover;
-      background-position: center;
-    }
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   left: 0;
+    //   bottom: 0;
+    //   padding-top: 2.03%;
+    //   width: 100%;
+    //   background-image: url("../img/zigzag-line-desktop.svg");
+    //   background-size: cover;
+    //   background-position: center;
+    //}
   }
 
   @media (min-width: @desktop-width) {
@@ -45,10 +45,10 @@
     &::before {
       position: absolute;
       content: "";
-      left: 0;
+      left: @desktop-body-gap;
       bottom: 0;
       padding-top: 2.03%;
-      width: 100%;
+      width: calc(100% - @desktop-body-gap * 2);
       background-image: url("../img/zigzag-line-desktop.svg");
       background-size: cover;
       background-position: center;
@@ -118,11 +118,7 @@
     margin-bottom: 43px;
   }
 
-  .week-product .block-title__main-text {
-    grid-column: 1;
-  }
-
-  .week-product .block-title__additional {
+  .week-product span {
     justify-self: end;
     width: 65px;
     margin-right: 28px;
@@ -154,23 +150,20 @@
   }
 
   .week-product .block-title {
+    position: relative;
     margin: 0;
     grid-template-columns: 1fr 2fr;
-  }
-
-  .week-product .block-title__main-text {
-    grid-column: 2;
-    position: relative;
     z-index: 1;
     white-space: nowrap;
   }
 
-  .week-product .block-title__additional {
+  .week-product span {
     justify-self: center;
     order: -1;
     min-width: 175px;
     margin-right: 0;
     padding: 0 46px;
+    white-space: normal;
   }
 
   .week-product__image {

@@ -1,6 +1,5 @@
-.reviews {
-  position: relative;
-  padding-top: 46px;
+.reviews__wrapper {
+  margin-top: 58px;
   padding-bottom: 53px;
 
   &::before {
@@ -16,51 +15,25 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 72px;
-    padding-top: 86px;
-    padding-bottom: 80px;
-    background-image: url("../img/review1.jpg");
-    background-position: top left;
-    background-repeat: no-repeat;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-image: none;
-
-    &::before {
-      background-image: none;
-    }
-  }
-}
-
-.reviews__wrapper {
-  @media (min-width: @tablet-width) {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 83px;
+    padding-bottom: 136px;
+    background-image: url("../img/review1.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 4fr 1fr;
-    position: relative;
-    padding-top: 54px;
-    padding-bottom: 163px;
-    background-image: url("../img/review1.jpg");
-    background-position: top left;
-    background-repeat: no-repeat;
+    padding-top: 82px;
+    padding-bottom: 190px;
+    background-position: @desktop-body-gap 0;
 
     &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: 0;
-      padding-top: 2.03%;
-      width: 100%;
-      background-image: url("../img/zigzag-line-desktop.svg");
-      background-size: cover;
-      background-position: center;
+      left: @desktop-body-gap;
+      width: calc(100% - @desktop-body-gap * 2);
     }
   }
 }
@@ -80,26 +53,23 @@
   }
 }
 
-.reviews__item-wrapper {
-  padding: 14px 0 30px;
-}
-
 .reviews__item {
   margin: 0;
 }
 
 .reviews__text {
   margin: 0;
+  margin-top: 14px;
   margin-bottom: 33px;
   min-height: 120px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 61px;
+    margin-top: 0;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 14px;
-    margin-right: 70px;
   }
 }
 
@@ -128,16 +98,19 @@
 .reviews__controls {
   display: flex;
   margin-bottom: 38px;
+  margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: @tablet-body-gap;
+    margin: 0;
+    bottom: 135px;
     width: 175px;
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 146px;
+    bottom: 186px;
+    right: @desktop-body-gap;
   }
 }
 
@@ -204,7 +177,7 @@
   .reviews__button {
     width: 175px;
     margin-left: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
