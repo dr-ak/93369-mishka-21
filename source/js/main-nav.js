@@ -6,9 +6,7 @@ navMain.classList.remove('main-nav--nojs');
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--opend')) {
     navMain.classList.remove('main-nav--opend');
-    addMobileItems();
   } else {
     navMain.classList.add('main-nav--opend');
-    removeMobileItems();
   }
 });
