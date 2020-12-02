@@ -15,22 +15,22 @@
               <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
             </a>
           </li>
-          <li class="site-list__item site-list__item--catalog site-list__item--mobile">
+          <li class="site-list__item site-list__item--catalog">
             <a href="catalog.html">
               Каталог товаров
             </a>
           </li>
-          <li class="site-list__item site-list__item--order site-list__item--mobile site-list__item--active">
+          <li class="site-list__item site-list__item--order site-list__item--active">
             <a>
               Вязание на заказ
             </a>
           </li>
-          <li class="site-list__item site-list__item--search site-list__item--mobile">
+          <li class="site-list__item site-list__item--search">
             <a href="">
               Поиск по сайту
             </a>
           </li>
-          <li class="site-list__item site-list__item--cart site-list__item--mobile">
+          <li class="site-list__item site-list__item--cart">
             <a href="">
               Корзина: пока пуста
             </a>
@@ -60,9 +60,9 @@
         <p class="page-main__form-text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
       <form class="order-form" action="http://echo.htmlacademy.ru/" method="post">
-        <div class="wrapper">
-          <fieldset class="order-form__fieldset">
-            <legend class="order-form__title">Тип</legend>
+        <fieldset class="order-form__fieldset order-form__fieldset--type">
+          <div class="wrapper">
+            <h2 class="order-form__title">Тип</h2>
             <ul class="order-form__list order-form__list--radio">
               <li class="order-form__item">
                 <input class="order-form__radio visually-hidden" id="accessories" type="radio" name="type" value="accessories" checked>
@@ -77,12 +77,11 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
-        </div>
-        <div class="wrapper wrapper--color">
-          <fieldset class="order-form__fieldset">
-            <!-- <legend class="order-form__title">Цвет</legend> -->
-            <div class="order-form__title"><legend>Цвет</legend></div>
+          </div>
+        </fieldset>
+        <fieldset class="order-form__fieldset order-form__fieldset--color">
+          <div class="wrapper">
+            <h2 class="order-form__title">Цвет</h2>
             <ul class="order-form__list order-form__list--checkbox">
               <li class="order-form__item">
                 <input class="order-form__checkbox visually-hidden" id="white" type="checkbox" name="white" checked>
@@ -121,11 +120,11 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
-        </div>
-        <div class="wrapper">
-          <fieldset class="order-form__fieldset">
-            <legend class="order-form__title">ФИО</legend>
+          </div>
+        </fieldset>
+        <fieldset class="order-form__fieldset order-form__fieldset--text">
+          <div class="wrapper">
+            <h2 class="order-form__title">ФИО</h2>
             <ul class="order-form__list order-form__list--text">
               <li class="order-form__item">
                 <label class="order-form__name" for="first-name">
@@ -146,31 +145,33 @@
                 <input class="order-form__text" id="middle-name" type="text" name="middle-name" placeholder="Отчество, если желаете">
               </li>
             </ul>
-          </fieldset>
-        </div>
-        <div class="wrapper wrapper--color">
-          <fieldset class="order-form__fieldset order-form__fieldset--tel">
-            <legend class="order-form__title">Тел</legend>
+          </div>
+        </fieldset>
+        <fieldset class="order-form__fieldset order-form__fieldset--tel">
+          <div class="wrapper">
+            <h2 class="order-form__title">Тел</h2>
             <label>
               <input class="order-form__tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </label>
-          </fieldset>
-          <fieldset class="order-form__fieldset order-form__fieldset--email">
-            <legend class="order-form__title order-form__title--email">E-mail</legend>
+          </div>
+        </fieldset>
+        <fieldset class="order-form__fieldset order-form__fieldset--email">
+          <div class="wrapper">
+            <h2 class="order-form__title order-form__title--email">E-mail</h2>
             <label>
               <input class="order-form__email" type="email" name="email" placeholder="Ваш Email*" required>
             </label>
-          </fieldset>
-        </div>
-        <div class="wrapper">
-          <fieldset class="order-form__fieldset order-form__fieldset--textarea">
-            <legend class="order-form__title">Доп</legend>
-            <textarea class="order-form__textarea" name="textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
-          <div class="order-form__footer">
-            <p><sup>*</sup>Поля обязательны для заполнения</p>
-            <button class="button order-form__button" type="submit">Отправить заказ</button>
           </div>
+        </fieldset>
+        <fieldset class="order-form__fieldset order-form__fieldset--textarea">
+          <div class="wrapper">
+            <h2 class="order-form__title">Доп</h2>
+            <textarea class="order-form__textarea" name="textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+        </fieldset>
+        <div class="order-form__footer wrapper">
+          <p><sup>*</sup>Поля обязательны для заполнения</p>
+          <button class="button order-form__button" type="submit">Отправить заказ</button>
         </div>
       </form>
     </main>
@@ -199,5 +200,7 @@
         </p>
       </div>
     </footer>
+
+    <script src="js/main-nav.js"></script>
   </body>
 </html>
