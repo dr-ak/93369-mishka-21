@@ -19,8 +19,6 @@
     .set-font-params(22px; 22px; bold);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-flow: column;
     margin-top: 0;
   }
 }
@@ -32,6 +30,17 @@
   @media (min-width: @tablet-width) {
     padding-top: 100px;
   }
+
+  &--ecology-stuff,
+  &--with-love {
+    order: -2;
+  }
+
+  &--economy,
+  &--support-local-brands {
+    order: -1;
+  }
+
 
   &::before {
     content: "";
