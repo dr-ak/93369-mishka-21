@@ -1,10 +1,19 @@
 .block-title {
   .set-font-params(25px; 30px; bold);
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    .set-font-params(43px; 43px; bold);
+  }
+
+  @media (min-width: @desktop-width) {
+    .set-font-params(53px; 53px; bold);
+  }
 }
 
-.block-title__additional {
+.block-title span {
+  display: block;
   color: @basic-second;
-  .set-font-params(17px; 20px; bold);
+  .set-font-params(17px; 25px; bold);
   text-transform: uppercase;
 }

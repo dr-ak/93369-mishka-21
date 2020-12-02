@@ -1,12 +1,102 @@
 .intro {
-  background-color: @basic-first;
-  width: 100%;
-  padding: 74px 22px;
-  text-align: center;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 73px;
+  background-color: @beige;
 
   &--image {
-    background-image: url("../img/hero-mobile.jpg");
+    min-height: 489px;
+    background-image: url("../img/hero-desktop.jpg");
     background-repeat: no-repeat;
-    height: 283px;
+    background-position: top center;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 154px;
+    padding-bottom: 12px;
+
+    &--image {
+      min-height: 758px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 34px;
+      bottom: 0;
+      z-index: 1;
+      background-image: url("../img/zigzag-fill-desktop.svg");
+      background-position: bottom center;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 158px;
+    padding-bottom: 17px;
+
+    &--image {
+      min-height: 763px;
+    }
+  }
+}
+
+.itro__title {
+  .container;
+  text-align: center;
+
+
+  @media (min-width: @tablet-width) {
+    top: 154px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 157px;
+  }
+}
+
+.intro__list {
+  .reset-list;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    .container;
+  }
+}
+
+.intro__link {
+  display: block;
+  background-color: @basic-second;
+  .set-font-params(19px; 24px; bold);
+  color: @basic-white;
+  padding: 24px 30px 31px;
+
+  @media (min-width: @tablet-width) {
+    padding: 25px 36px 34px;
+    .set-font-params(20px; 30px; bold);
+  }
+
+  &--interior {
+    background-image: url("../img/interior.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 36px) center;
+  }
+
+  &--toy {
+    background-color: @green;
+    background-image: url("../img/toy.svg");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 27px) center;
+
+    @media (min-width: @tablet-width) {
+      background-position: calc(100% - 33px) center;
+    }
   }
 }
