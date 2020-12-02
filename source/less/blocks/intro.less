@@ -1,24 +1,30 @@
 .intro {
   position: relative;
   z-index: -1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-top: 73px;
-  background-color: @beige;
+  padding-top: 74px;
+  padding-bottom: 76px;
+  background-color: @basic-first;
 
   &--image {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 489px;
+    padding-top: 73px;
+    padding-bottom: 0;
+    background-color: @beige;
     background-image: url("../img/hero-desktop.jpg");
     background-repeat: no-repeat;
     background-position: top center;
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 154px;
-    padding-bottom: 12px;
+    padding-top: 100px;
+    padding-bottom: 95px;
 
     &--image {
+      padding-top: 154px;
+      padding-bottom: 12px;
       min-height: 758px;
     }
 
@@ -35,11 +41,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 158px;
-    padding-bottom: 17px;
+    padding-top: 102px;
+    padding-bottom: 113px;
 
     &--image {
-      min-height: 763px;
+      min-height: 761px;
+      padding-top: 156px;
+      padding-bottom: 17px;
     }
   }
 }
@@ -47,15 +55,6 @@
 .itro__title {
   .container;
   text-align: center;
-
-
-  @media (min-width: @tablet-width) {
-    top: 154px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 157px;
-  }
 }
 
 .intro__list {
