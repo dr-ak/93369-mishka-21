@@ -1,7 +1,12 @@
 .production {
+  display: grid;
   margin: 0 30px 58px;
   padding-bottom: 33px;
   border: 1px solid @gray;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 4fr 2fr;
+  }
 }
 
 .production__title {
@@ -15,6 +20,14 @@
 
 .production video {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1 / span 4;
+  }
 }
 
 .production p {
