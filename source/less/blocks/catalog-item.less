@@ -1,7 +1,7 @@
 .catalog-item {
   @media (min-width: @tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 334px auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -11,7 +11,19 @@
 }
 
 .catalog-item img {
+  width: 260px;
+  height: 195px;
   display: block;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .catalog-item__info {
@@ -46,7 +58,6 @@
 }
 
 .catalog-item__footer {
-  justify-self: end;
   border-top: 1px solid @gray;
   display: flex;
   justify-content: space-between;

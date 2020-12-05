@@ -12,15 +12,9 @@
   }
 }
 
-
-.main-nav--nojs .site-list__item,
-.main-nav--opend .site-list__item {
-  &--catalog,
-  &--order,
-  &--search,
-  &--cart {
-    display: block;
-  }
+.main-nav--nojs .site-list__item:not(:nth-last-child(-n + 3)),
+.main-nav--opend .site-list__item:not(:nth-last-child(-n + 3)) {
+  display: block;
 }
 
 .site-list__item {
