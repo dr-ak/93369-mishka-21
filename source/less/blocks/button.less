@@ -1,10 +1,21 @@
 .button {
   text-align: center;
   display: block;
-  padding: 16px 0;
+  padding: 14px 0;
   .set-font-params(18px; 20px; bold);
   color: @extra-dark-gray;
   text-transform: uppercase;
   border: 2px solid @extra-dark-gray;
   background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    &:hover {
+      background-color: @extra-dark-gray;
+      color: @basic-white;
+    }
+
+    &:active {
+      color: @opacity-white3;
+    }
+  }
 }

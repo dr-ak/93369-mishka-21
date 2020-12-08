@@ -1,6 +1,7 @@
 
 
 .contacts .block-title {
+  .set-font-params(18px; 30px; bold);
   position: relative;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -9,11 +10,15 @@
   .container;
 
   @media (min-width: @tablet-width) {
+    margin-top: 47px;
+    .set-font-params(43px; 50px; bold);
+
     &::after {
       justify-self: end;
       content: "";
       width: 80px;
       height: 80px;
+      margin-right: 3px;
       margin-bottom: 10px;
       background: conic-gradient(transparent 242deg, @basic-second 245deg 295deg, transparent 298deg) 40px -16px no-repeat,
         linear-gradient(90deg, @basic-black 0 4px, transparent 4px) 32px 0 no-repeat;
@@ -27,10 +32,11 @@
     margin-bottom: 18px;
     margin-top: 10px;
     align-self: end;
+    .set-font-params(53px; 57px; bold);
 
     &::after {
       order: -1;
-      margin-right: 60px;
+      margin-right: 65px;
     }
   }
 }
@@ -43,8 +49,8 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 38px;
-    margin-bottom: 49px;
+    margin-top: 31px;
+    margin-bottom: 18px;
     .set-font-params(17px; 30px);
   }
 
@@ -59,6 +65,7 @@
 
 .contacts__item {
   display: flex;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -71,7 +78,7 @@
 }
 
 .contacts__type {
-  min-width: 76px;
+  min-width: 78px;
 }
 
 .contacts__address {
@@ -79,17 +86,32 @@
 }
 
 .contacts__address a {
+  position: relative;
   color: @basic-black;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 179px;
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: @basic-second;
+
+    @media (min-width: @tablet-width) {
+      width: 204px;
+    }
+  }
 }
 
 .contacts__button-wrap {
   width: 100%;
   .container;
-  margin-top: 40px;
+  margin-top: 35px;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 55px;
+    margin-top: 48px;
     margin-bottom: 57px;
   }
 
@@ -104,7 +126,11 @@
 
 .contacts__map iframe {
   width: 100%;
-  height: 460px;
+  height: 454px;
+
+  @media (min-width: @tablet-width) {
+    height: 457px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -112,6 +138,17 @@
     width: 230px;
     margin-left: 50%;
     transform: translateX(-50%);
+  }
+
+  .contacts__item a {
+    &:hover {
+      color: @basic-second;
+    }
+
+    &:active {
+      box-shadow: 0 3px 0 0 @basic-white,
+        0 4px 0 0 @opacity-basic-second1;
+    }
   }
 }
 
