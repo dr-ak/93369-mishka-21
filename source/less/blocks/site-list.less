@@ -20,6 +20,10 @@
 .site-list__item {
   .container;
 
+  &--active {
+    pointer-events: none;
+  }
+
   @media (max-width: @mobile-width-only) {
     display: none;
     background-color: @basic-white;
@@ -32,16 +36,11 @@
 
   @media (min-width: @tablet-width) {
     display: block;
-    padding: 32px 0;
-
-    &--logo {
-      padding: 22px 0 20px;
-    }
+    padding: 0;
 
     &--catalog,
     &--order {
       grid-row: 2;
-      padding-top: 20px;
       min-width: 160px;
       font-size: 15px;
     }
@@ -87,7 +86,6 @@
     &--catalog,
     &--order {
       grid-row: 1;
-      padding: 32px 0;
       font-size: 17px;
     }
 
@@ -103,7 +101,6 @@
 
     &--logo {
       grid-column: 3;
-      padding: 9px 0 7px;
     }
 
     &--search {
@@ -112,7 +109,6 @@
 
     &--coming,
     &--sale {
-      padding: 20px 0;
       font-size: 15px;
     }
 
@@ -130,7 +126,7 @@
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    padding: 32px 0;
     box-shadow: none;
   }
 }
@@ -141,11 +137,11 @@
   @media (min-width: @tablet-width) {
     padding: 0;
 
-    &[href]:hover {
+    &:hover {
       opacity: 0.6;
     }
 
-    &[href]:active {
+    &:active {
       opacity: 0.3;
     }
   }
@@ -194,28 +190,55 @@
   opacity: 0.2;
 }
 
-.site-list__item a[href]:hover {
+.site-list__item a:hover {
   @media (min-width: @desktop-width) {
     color: @opacity-black6;
   }
 }
 
-.site-list__item:hover svg {
+.site-list__link:hover svg {
   @media (min-width: @desktop-width) {
     fill: @basic-second;
     opacity: 1;
   }
 }
 
-.site-list__item a[href]:active {
+.site-list__item a:active {
   @media (min-width: @desktop-width) {
     color: @opacity-black3;
   }
 }
 
-.site-list__item:active svg {
+.site-list__link:active svg {
   @media (min-width: @desktop-width) {
     fill: @basic-second;
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item--logo a {
+    padding: 22px 0 20px;
+  }
+
+  .site-list__item--catalog a,
+  .site-list__item--order a {
+    padding-top: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item--catalog a,
+  .site-list__item--order a {
+    padding: 32px 0;
+  }
+
+  .site-list__item--logo a {
+    padding: 9px 0 7px;
+  }
+
+  .site-list__item--coming a,
+  .site-list__item--sale a {
+    padding: 20px 0;
   }
 }

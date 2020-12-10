@@ -3,7 +3,7 @@
   padding-top: 31px;
   padding-bottom: 42px;
 
-  &::before {
+  &::after {
     position: absolute;
     content: "";
     bottom: 0;
@@ -17,7 +17,7 @@
     padding-top: 43px;
     padding-bottom: 64px;
 
-    &::before {
+    &::after {
       height: 17px;
       background-image: url("../img/zigzag-line-tablet.svg");
     }
@@ -27,7 +27,7 @@
     padding-top: 0;
     padding-bottom: 0;
 
-    &::before {
+    &::after {
       height: 23px;
       background-image: url("../img/zigzag-line-desktop.svg");
       background-repeat: no-repeat;
@@ -178,7 +178,9 @@
     order: -1;
     min-width: 175px;
     margin-right: 0;
-    padding: 0 46px;
+    margin-top: 5px;
+    padding-right: 46px;
+    padding-left: 35px;
     white-space: normal;
   }
 

@@ -26,6 +26,11 @@
       padding-bottom: 12px;
       min-height: 758px;
       background-image: url("../img/hero-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 527px auto;
+      }
     }
 
     &::after {
@@ -68,6 +73,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
     .container;
   }
 }
@@ -83,18 +89,19 @@
   @media (min-width: @tablet-width) {
     padding: 25px 36px 34px;
     .set-font-params(20px; 30px; bold);
-  }
 
-  &:hover {
-    background-color: @green;
+    &:hover {
+      background-color: @green;
+      padding-bottom: 39px;
 
-    &::before {
-      opacity: 1;
+      &::before {
+        opacity: 1;
+      }
     }
-  }
 
-  &:active::before {
-    opacity: 0.3;
+    &:active::before {
+      opacity: 0.3;
+    }
   }
 
   &--interior {
@@ -113,10 +120,6 @@
   &--toy {
     background-color: @dark-green;
 
-    &:hover {
-      background-color: @extra-dark-green;
-    }
-
     &::before {
       position: absolute;
       content: "";
@@ -129,6 +132,10 @@
     }
 
     @media (min-width: @tablet-width) {
+      &:hover {
+        background-color: @extra-dark-green;
+      }
+
       &::before {
         right: 33px;
       }
