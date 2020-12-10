@@ -1,39 +1,50 @@
 .reviews__wrapper {
-  margin-top: 58px;
-  padding-bottom: 53px;
+  position: relative;
+  margin-top: 48px;
+  padding-bottom: 51px;
 
   &::before {
     position: absolute;
     content: "";
-    left: 0;
     bottom: 0;
-    padding-top: 2.03%;
+    left: 0;
     width: 100%;
-    background-image: url("../img/zigzag-line-desktop.svg");
-    background-size: cover;
+    height: 6px;
+    background-image: url("../img/zigzag-line-mobile.svg");
     background-position: center;
   }
 
   @media (min-width: @tablet-width) {
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-top: 83px;
-    padding-bottom: 136px;
+    margin-top: 75px;
+    padding-top: 80px;
+    padding-bottom: 133px;
     background-image: url("../img/review1.jpg");
     background-position: top left;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review1@2x.jpg");
+      background-size: 350px auto;
+    }
+
+    &::before {
+      height: 17px;
+      background-image: url("../img/zigzag-line-tablet.svg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 4fr 1fr;
     padding-top: 82px;
-    padding-bottom: 190px;
+    padding-bottom: 184px;
     background-position: @desktop-body-gap 0;
 
     &::before {
-      left: @desktop-body-gap;
-      width: calc(100% - @desktop-body-gap * 2);
+      height: 23px;
+      background-image: url("../img/zigzag-line-desktop.svg");
+      background-repeat: no-repeat;
     }
   }
 }
@@ -88,6 +99,7 @@
 
 .reviews__name {
   margin: 0;
+  margin-bottom: 4px;
   font-weight: bold;
 }
 
@@ -109,7 +121,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    bottom: 186px;
+    bottom: 188px;
     right: @desktop-body-gap;
   }
 }
@@ -170,19 +182,32 @@
 
   @media (min-width: @tablet-width) {
     border: none;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
+  .reviews .block-title {
+    margin-top: 8px;
+  }
+
   .reviews__button {
     width: 175px;
     margin-left: auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .reviews .block-title {
+    margin-top: 0;
     grid-column: 2;
   }
 }

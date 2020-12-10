@@ -1,11 +1,9 @@
 .catalog {
-  max-width: @mobile-width;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    max-width: @desktop-width;
     padding-top: 67px;
     padding-bottom: 53px;
   }
@@ -13,6 +11,12 @@
   @media (min-width: @tablet-width) {
     padding-top: 111px;
     padding-bottom: 57px;
+  }
+}
+
+.catalog__wrapper {
+  @media (max-width: @mobile-width-only) {
+    .container(false);
   }
 }
 

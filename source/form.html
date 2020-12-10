@@ -13,7 +13,11 @@
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--logo">
             <a href="index.html">
-              <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+                <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип «Мишка»">
+              </picture>
             </a>
           </li>
           <li class="site-list__item site-list__item--catalog">
@@ -179,24 +183,40 @@
 
     <footer class="page-footer">
       <div class="wrapper page-footer__wrapper">
-        <a class="page-footer__logo">
-          <img src="img/logo-footer.svg" width="86" height="35" alt="Логотип «Мишка»">
+        <a href="index.html" class="page-footer__logo">
+          <svg width="86" height="35">
+            <use xlink:href="img/icon-lib.svg#icon-logo-footer"></use>
+          </svg>
         </a>
         <ul class="social-list page-footer__social">
           <li class="social-list__item social-list__item--insta">
-            <a href="" aria-label="Мишка в Instagram"></a>
+            <a href="" aria-label="Мишка в Instagram">
+              <svg width="22" height="28">
+                <use xlink:href="img/icon-lib.svg#icon-insta"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item social-list__item--fb">
-            <a href="" aria-label="Мишка в Facebook"></a>
+            <a href="" aria-label="Мишка в Facebook">
+              <svg width="15" height="28">
+                <use xlink:href="img/icon-lib.svg#icon-fb"></use>
+              </svg>
+            </a>
           </li>
           <li class="social-list__item social-list__item--twitter">
-            <a href="" aria-label="Мишка в Twitter"></a>
+            <a href="" aria-label="Мишка в Twitter">
+              <svg width="23" height="28">
+                <use xlink:href="img/icon-lib.svg#icon-twitter"></use>
+              </svg>
+            </a>
           </li>
         </ul>
         <p class="page-footer__copyright">
           Разработано
           <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/htmlacademy.svg" alt="">
+            <svg width="27" height="35">
+              <use xlink:href="img/icon-lib.svg#htmlacademy"></use>
+            </svg>
           </a>
         </p>
       </div>
