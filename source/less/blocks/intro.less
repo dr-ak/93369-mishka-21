@@ -1,7 +1,7 @@
 .intro {
   position: relative;
   padding-top: 74px;
-  padding-bottom: 76px;
+  padding-bottom: 74px;
   background-color: @basic-first;
 
   &--image {
@@ -19,7 +19,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 100px;
-    padding-bottom: 95px;
+    padding-bottom: 88px;
 
     &--image {
       padding-top: 154px;
@@ -37,7 +37,7 @@
       position: absolute;
       content: "";
       width: 100%;
-      height: 3.11%;
+      height: 24px;
       bottom: 0;
       z-index: 1;
       background-image: url("../img/zigzag-fill-tablet.svg");
@@ -46,18 +46,23 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 102px;
+    padding-top: 100px;
     padding-bottom: 113px;
+
+    &::after {
+      height: 34px;
+      background-image: url("../img/zigzag-fill-desktop2.svg");
+    }
 
     &--image {
       min-height: 764px;
       padding-top: 156px;
       padding-bottom: 17px;
-    }
 
-    &::after {
-      height: 34px;
-      background-image: url("../img/zigzag-fill-desktop.svg");
+      &::after {
+        height: 34px;
+        background-image: url("../img/zigzag-fill-desktop.svg");
+      }
     }
   }
 }
