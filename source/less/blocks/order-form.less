@@ -35,44 +35,40 @@
 
 .order-form__fieldset--tel label {
   margin-top: 16px;
+}
 
-  &:hover::before,
-  &:focus-within::before {
-    opacity: 1;
-    background-position-y: 24px;
+.order-form__fieldset--tel svg {
+  position: absolute;
+  bottom: 52px;
+  right: 37px;
+  content: "";
+  width: 25px;
+  height: 24px;
+  opacity: 0.2;
+
+  @media (min-width: @tablet-width) {
+    bottom: 17px;
+    right: 27px;
   }
 
-  &::before {
-    position: absolute;
-    bottom: 52px;
-    right: 37px;
-    display: block;
-    content: "";
-    width: 25px;
-    height: 24px;
-    background-image: url("../img/phone.svg");
-    opacity: 0.2;
-
-    @media (min-width: @tablet-width) {
-      bottom: 17px;
-      right: 27px;
-    }
-
-    @media (min-width: @desktop-width) {
-      right: 7px;
-    }
+  @media (min-width: @desktop-width) {
+    right: 7px;
   }
 }
 
-.order-form__fieldset--email label::before {
+.order-form__tel:hover + svg,
+.order-form__tel:focus + svg {
+  fill: @basic-second;
+  opacity: 1;
+}
+
+.order-form__fieldset--email svg {
   position: absolute;
   bottom: 50px;
   right: 31px;
-  display: block;
   content: "";
   width: 32px;
   height: 21px;
-  background-image: url("../img/mail.svg");
   opacity: 0.2;
 
   @media (min-width: @tablet-width) {
@@ -83,6 +79,12 @@
   @media (min-width: @desktop-width) {
     right: 4px;
   }
+}
+
+.order-form__email:hover + svg,
+.order-form__email:focus + svg {
+  fill: @basic-second;
+  opacity: 1;
 }
 
 .order-form__title {
