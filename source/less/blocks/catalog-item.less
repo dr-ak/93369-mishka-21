@@ -14,10 +14,11 @@
   width: 260px;
   height: 195px;
   display: block;
+  object-fit: cover;
 
   @media (min-width: @tablet-width) {
-    width: 334px;
-    height: 334px;
+    width: 332px;
+    height: 332px;
   }
 
   @media (min-width: @desktop-width) {
@@ -30,11 +31,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 28px 28px 26px;
+  padding: 27px 28px 25px;
 }
 
 .catalog-item__header {
   padding-bottom: 18px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 13px;
+  }
 }
 
 .catalog-item__title {
@@ -71,4 +76,21 @@
   @media (min-width: @tablet-width) {
     .set-font-params(17px; 24px; bold);
   }
+}
+
+.catalog-item__cart {
+  padding-top: 20px;
+}
+
+.catalog-item__cart svg {
+  opacity: 0.2;
+}
+
+.catalog-item__cart:hover svg {
+  opacity: 1;
+  fill: @basic-second;
+}
+
+.catalog-item__cart:active svg {
+  opacity: 0.3;
 }
