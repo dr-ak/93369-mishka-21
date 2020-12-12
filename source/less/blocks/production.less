@@ -18,6 +18,23 @@
     margin-bottom: 105px;
     grid-template-columns: 4fr 2fr;
     column-gap: 24px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 35%;
+      height: 100%;
+      right: 0;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      box-shadow: 0 6px 10px @opacity-black1;
+    }
+
+    &:active::after {
+      box-shadow: 0 3px 5px @opacity-black1;
+    }
   }
 }
 
