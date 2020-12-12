@@ -2,6 +2,14 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 334px auto;
+
+    &:hover {
+      box-shadow: 0 6px 10px @opacity-black1;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px @opacity-black1;
+    }
   }
 
   @media (min-width: @desktop-width) {
