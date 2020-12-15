@@ -11,22 +11,24 @@ const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const cheerio = require('gulp-cheerio');
 const del = require("del");
 const sync = require("browser-sync").create();
 
 // Styles
 
 const styles = () => {
-  return gulp.src("source/less/style.less")
+  return gulp.src("source/less/*.less")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
+    .pipe(gulp.dest("build/css"))
     .pipe(postcss([
       autoprefixer(),
       csso()
     ]))
+    .pipe(rename({ suffix: '.min'}))
     .pipe(sourcemap.write("."))
-    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
@@ -39,18 +41,15 @@ const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
-    // .pipe(sync.stream());
 }
 
 // Scripts
 
 const scripts = () => {
   return gulp.src("source/js/*.js")
+    .pipe(plumber())
     .pipe(uglify())
-    .pipe(rename((path) => {
-      path.basename += ".min";
-      path.extname = ".js";
-    }))
+    .pipe(rename({ suffix: '.min'}))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
@@ -60,7 +59,10 @@ exports.scripts = scripts;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src([
+    "source/img/**/*.{png,jpg,svg}",
+    "!source/img/icon-*.svg",
+  ])
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -74,7 +76,7 @@ exports.images = images;
 // WebP
 
 const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
+  return gulp.src("build/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 }
@@ -85,6 +87,14 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp.src("source/img/icon-*.svg")
+    .pipe(cheerio({
+      run: ($) => {
+          $('[fill]').removeAttr('fill');
+          $('[opacity]').removeAttr('opacity');
+      },
+      parserOptions: { xmlMode: true }
+    }))
+    .pipe(imagemin([imagemin.svgo()]))
     .pipe(svgstore())
     .pipe(rename("icon-lib.svg"))
     .pipe(gulp.dest("build/img"))
@@ -98,8 +108,6 @@ const copy = done => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}",
-    "!source/img/icon-*.svg",
   ], {
     base: "source"
   })
@@ -157,8 +165,10 @@ const build = gulp.series(
     scripts,
     sprite,
     copy,
-    images,
-    createWebp
+    gulp.series(
+      images,
+      createWebp
+    )
   ));
 
 exports.build = build;
@@ -173,7 +183,10 @@ exports.default = gulp.series(
     scripts,
     sprite,
     copy,
-    createWebp
+    gulp.series(
+      images,
+      createWebp
+    )
   ),
   gulp.series(
     server,
