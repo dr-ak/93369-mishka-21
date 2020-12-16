@@ -32,16 +32,6 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 27px 28px 25px;
-
-  @media (min-width: @desktop-width) {
-    &:hover {
-      box-shadow: 0 6px 10px @opacity-black1;
-    }
-
-    &:active {
-      box-shadow: 0 3px 5px @opacity-black1;
-    }
-  }
 }
 
 .catalog-item__header {
@@ -103,4 +93,15 @@
 
 .catalog-item__cart:active svg {
   opacity: 0.3;
+}
+
+
+@media (min-width: @desktop-width) {
+  .catalog-item:hover .catalog-item__info {
+    box-shadow: 0 6px 10px @opacity-black1;
+  }
+
+  .catalog-item:active .catalog-item__info {
+    box-shadow: 0 3px 5px @opacity-black1;
+  }
 }
