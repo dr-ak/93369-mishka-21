@@ -33,6 +33,10 @@
   }
 }
 
+.order-form label {
+  cursor: pointer;
+}
+
 .order-form__fieldset--tel label {
   margin-top: 16px;
 }
@@ -58,7 +62,7 @@
 
 .order-form__tel:hover + svg,
 .order-form__tel:focus + svg {
-  fill: @basic-second;
+  fill: @light-green;
   opacity: 1;
 }
 
@@ -83,7 +87,7 @@
 
 .order-form__email:hover + svg,
 .order-form__email:focus + svg {
-  fill: @basic-second;
+  fill: @light-green;
   opacity: 1;
 }
 
@@ -101,7 +105,7 @@
     flex-grow: 1;
     width: 100px;
     height: 1px;
-    background-color: @basic-second;
+    background-color: @light-green;
     margin-left: 25px;
   }
 
@@ -230,7 +234,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background-color: @basic-second;
+  background-color: @light-green;
 
   @media (min-width: @tablet-width) {
     width: 21px;
@@ -276,6 +280,11 @@
     width: 29px;
     height: 16px;
   }
+}
+
+.order-form__radio:focus + label::before,
+.order-form__checkbox:focus + label::before {
+  border-color: @green;
 }
 
 .order-form__text {
@@ -394,7 +403,7 @@
   &:hover,
   &:focus {
     outline: none;
-    border-color: @basic-second;
+    border-color: @light-green;
   }
 
   @media (min-width: @tablet-width) {
@@ -452,7 +461,7 @@
 .order-form__email {
   &:hover,
   &:focus {
-    box-shadow: inset 0 -2px 0 @basic-second;
+    box-shadow: inset 0 -2px 0 @light-green;
   }
 }
 
@@ -500,7 +509,7 @@
   .order-form__radio + label,
   .order-form__checkbox + label {
     &:hover::before {
-      border-color: @basic-second;
+      border-color: @light-green;
     }
 
     &:active::before {
