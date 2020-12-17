@@ -128,6 +128,37 @@
   }
 }
 
+.contacts__map--nojs {
+  position: relative;
+  width: 100%;
+  height: 454px;
+  background-color: @gray;
+  background-image: url("../img/map-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/map-tablet.jpg");
+    height: 457px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/map-desktop.jpg");
+    height: 457px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/map-pin.svg");
+    left: 50%;
+    top: 50%;
+    transform: translate(-35%, -83%);
+  }
+}
+
 .contacts__map iframe {
   border: none;
   width: 100%;
