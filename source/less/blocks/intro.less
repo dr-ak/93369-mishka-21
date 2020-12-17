@@ -5,9 +5,8 @@
   background-color: @basic-first;
 
   &--image {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr min-content;
     min-height: 489px;
     padding-top: 73px;
     padding-bottom: 0;
@@ -67,7 +66,7 @@
   }
 }
 
-.itro__title {
+.intro__title {
   .container;
   text-align: center;
 }
